@@ -4,6 +4,8 @@ from odoo import api, fields, models, _
 import datetime
 from .. import misc
 from odoo.exceptions import ValidationError
+#from odoo.addons.garden_planner.helper.nikenium import get_flower_pictures
+from .nikenium import get_flower_pictures
 
 
 class crops(models.Model):
@@ -17,6 +19,8 @@ class crops(models.Model):
     tag_ids = fields.Many2many(
         comodel_name="lisigruen.tags",
     )
+
+    sorte = fields.Char(string='Sorte')
 
     name_common = fields.Char(string='Vulgo')
     dtm = fields.Integer(string='DTM', compute="_dtm_from", store=False)
@@ -117,6 +121,11 @@ class crops(models.Model):
             "view_mode": "tree,form",
             "target": "current",
         }
+
+    def get_pictures_for_plants(self):
+
+        input = {"search_term": "gänseblümchen"}
+        get_flower_pictures(input)
 
     def action_url(self):
 

@@ -2,7 +2,7 @@
 <odoo>
 
     <record id="mytime_insta_res_config_settings_view_form2" model="ir.ui.view">
-        <field name="name">	product.template.product.form</field>
+        <field name="name">product.template.product.form</field>
         <field name="model">product.template</field>
         <field name="priority" eval="20" />
         <field name="inherit_id" ref="product.product_template_only_form_view" />
@@ -12,9 +12,38 @@
                     <group>
                         <field name="name_latein" />
                         <field name="name_common" />
+                        <field name="sorte" />
+                        <field name="dtm" />
+                        <field name="generation" />
+                        <field name="aussaat" />
+                        <field name="start_harvest" />
+                        <field name="end_harvest" />
+                        <field name="name_common" />
+                        <field name="name_common" />
+                    </group>
+                </page>
+                <page name="direct seeding calendar" string="Direct Seeding Calendar">
+                    <group>
+                        <field name="kw" />
+                        <field name="meter_aussat" />
+                        <field name="reihen_beet" />
+                        <field name="abstand" />
+                        <field name="platten" />
                     </group>
                 </page>
             </xpath>
+        </field>
+    </record>
+
+    <record id="garden_planner_extension_picture_button" model="ir.ui.view">
+        <field name="name">product.template.product.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="purchase.view_product_template_purchase_buttons_from" />
+        <field eval="9" name="priority" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button id="get_pictures_for_plants" name="get_pictures_for_plants" string="Suche Bilder auf Google" class="btn-primary" type="object" />
+            </div>
         </field>
     </record>
 

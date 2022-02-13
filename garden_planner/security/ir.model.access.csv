@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_gardenplanner_blogtester,gardenplanner.blogtester,model_gardenplanner_blogtester,base.group_user,1,1,1,1
+access_lisigruen.sorten,lisigruen.sorten,model_lisigruen_sorten,base.group_user,1,1,1,1
+

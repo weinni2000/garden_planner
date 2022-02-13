@@ -30,13 +30,15 @@
                 "website_sale",
                 "web_editor",
                 "mass_mailing",
+                "fieldservice"
                 ],
 
     # always loaded
     'data': [
         # "wizard/get_insta_posts.xml",
         'security/ir.model.access.csv',
-        "views/crops_tab.xml"
+        "views/crops_tab.xml",
+        "views/task_extender.xml"
 
     ],
 
